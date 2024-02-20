@@ -1,20 +1,33 @@
-div#container 
+/* div#container 
 {
 	width: 800px;
 	height: 600px;
-	background: url("../images/frame_copper_ver02.png") no-repeat;
+	 background: url("../images/frame_copper_ver02.png") no-repeat;	
+	
+}
+*/
+
+.parentContainer {
+	position: relative; 
+    background-color: lightgray; 
+    max-width: 850px;
+    height: 650px;
 }
 
+.imgBox {
+	display: flex;
+	background: rgb(153, 49, 49);
+	align-items: center;
+	padding: 12px 10px;
+}
 div#simtitle
 {
-	position:absolute;
-	left:100px;
-	top:25px;
-	height: 40px;
-	width: 650px;
-	text-align: center;
-	font-size: 36px;
-	font-family: Times;
+    /* position: absolute; */
+    width: 100%;
+    text-align: center;
+    font-size: 36px;
+    font-family:sans-serif;
+	font-weight: bold;
 }
 
 div#vartitle

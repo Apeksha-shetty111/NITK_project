@@ -20,6 +20,7 @@
 	align-items: center;
 	padding: 12px 10px;
 }
+
 div#simtitle
 {
     /* position: absolute; */
@@ -30,7 +31,7 @@ div#simtitle
 	font-weight: bold;
 }
 
-div#vartitle
+/* div#vartitle
 {
 	position:absolute;
 	left:629px;
@@ -52,17 +53,19 @@ div#ctrltitle
 	text-align: center;
 	font-size: 16px;
 	font-family:serif;
-}
+} */
 
 div#copyright
 {
-	position:absolute;
+	/* position:absolute;
 	top:585px;
 	height: 10px;
-	width: 800px;
+	width: 800px; */
 	text-align: center;
-	font-size: 12px;
+	font-size: 14px;
 	font-family:sans-serif;
+	margin:10px;
+	background-color: brown;
 }
 #tabchangeforward
 {
@@ -98,26 +101,44 @@ canvas#simscreen2
 	height: 400px;
 	width: 550px;
 }
-
+#partImage {
+	position: absolute;
+    top: 149px;
+    left: 114px;
+}
 canvas#simscreen
 {
-	position:absolute;
+	/* position:absolute;
 	left:30px;
 	top:100px;
+	width: 550px; */
 	height: 400px;
-	width: 550px;
 }
-
+#firstRow {
+	display: flex;
+	gap: 30px;
+}
+.firstCol {
+	display: flex;
+	flex-direction: column;
+}
+.imageRow{
+	display: flex;
+}
+.textRow{
+	display: flex;
+}
 div#commentboxleft
 {
+	flex: 1;
 	border-top-style: dotted;
 	border-top-width: 2px;
 	border-top-color: #f6ebed;
-	position:absolute;
+	/* position:absolute;
 	left:28px;
-	top:505px;
+	top:505px; */
 	height: 65px;
-	width: 190px;
+	/* width: 190px; */
 	color: #e7722b;
 	text-align: left;
 	font-size: 15px;
@@ -126,17 +147,18 @@ div#commentboxleft
 
 div#commentboxright
 {	
+	flex: 1;
 	border-top-style: dotted;
 	border-top-width: 2px;
 	border-top-color: #f6ebed;	
 	border-left-style: dotted;
 	border-left-width: 2px;
 	border-left-color: #f6ebed;
-	position:absolute;
+	/* position:absolute;
 	left:300px;
-	top: 505px;
+	top: 505px; */
 	height: 65px;
-	width: 300px;
+	/* width: 300px; */
 	padding-left: 5px;
 	color: #e7722b;
 	text-align: left;
@@ -145,23 +167,23 @@ div#commentboxright
 }
 
 
-div#variables
+/* div#variables
 {
 	position:absolute;
 	left:610px;
 	top:120px;
 	height: 285px;
 	width: 175px;
-}
+} */
 
-div#controls
+/* div#controls
 {
 	position:absolute;
 	left:607px;
 	top:435px;
 	height: 140px;
 	width: 175px;
-}
+} */
 
 #playpausebutton
 {
@@ -379,11 +401,11 @@ ul li{
    left: -10px;
 }
 
-#titleincanvas
+/* #titleincanvas
 {
 	position: absolute;
 	left: 250px; top:100px;
-}
+} */
 
 /* Theme edited for Simulation UI */
 

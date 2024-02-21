@@ -1,4 +1,4 @@
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width: 870px) {
 
     .secondColumn{
         display: flex;
@@ -15,9 +15,18 @@
         flex-direction:column;
     }
 
+    .firstCol {
+        margin-right: 10px;
+        margin-bottom: 0px;
+    }
+
+    /* #exp {
+        left: 212px;
+         top: 182px;
+    } */
 }
 
-@media screen and (max-width: 630px) {
+@media screen and (max-width: 665px) {
 
     .secondColumn{
         display: flex;
@@ -42,6 +51,4 @@
         justify-content: center;
         align-items: center;
     }
-
-
 }

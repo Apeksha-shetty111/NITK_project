@@ -19,7 +19,7 @@
 	<script src="js/graph_use.ob.js"></script>
 	<script src="js/graph_use2.ob.js"></script>
 	<link href="css/mathstyle.css" rel="stylesheet" />
-	<link href="./css/responsive.css" rel="stylesheet"/>
+	<link href="./css/responsive.css" rel="stylesheet" />
 </head>
 
 <body onload="editcss(); startsim(); varinit();printcomment();">
@@ -29,7 +29,7 @@
 	</noscript>
 
 	<div class="parentContainer">
-		
+
 		<div class="imgBox">
 			<img src="../images/logo.png" alt="logo" height="50px" width="50px" />
 			<div id="simtitle">Porter Governor</div>
@@ -37,26 +37,43 @@
 
 		<div id="firstRow">
 			<div class="firstCol">
-				<div class="imageRow">
-					<canvas id="simscreen" height="400px"></canvas>
-					<div class="imgGraph">
-						<p id="fb"
-							style="font-size:20px; font-weight:bold; font-family: sans-serif; text-align: center;">Free
-							Body Diagram</p>
-						<p id="eqn" style="font-size: 24px; font-family: Comic Sans MS;display:none">N<sup>2</sup>
-							&alpha; <span class="frac"><sup>1</sup><span>&frasl;</span><sub>h</sub></span></p>
+				<div style="width: 100%;">
+					<div class="imageRow">
+						<canvas id="simscreen" height="400px"></canvas>
+						<div class="imgGraph">
+							<p id="fb"
+								style="font-size:20px; font-weight:bold; font-family: sans-serif; text-align: center;">
+								Free
+								Body Diagram</p>
+							<p id="eqn" style="font-size: 24px; font-family: Comic Sans MS;display:none">N<sup>2</sup>
+								&alpha; <span class="frac"><sup>1</sup><span>&frasl;</span><sub>h</sub></span></p>
 
-						<!-- Used mathstyle.css file to display equation -->
-						<img src="images/FBD_porter.png" id="myImg" style="height:380px;" />
-						<div id="graph" style="width:300px;height:300px;display: none;"></div>
+							<!-- Used mathstyle.css file to display equation -->
+							<img src="images/FBD_porter.png" id="myImg" style="height:380px;" />
+							<div id="graph" style="width:300px;height:300px;display: none;"></div>
+						</div>
+					</div>
+					<div class="textRow">
+						<div id="commentboxleft"></div>
+						<div id="commentboxright"></div>
 					</div>
 				</div>
-				<div class="textRow">
-					<div id="commentboxleft"></div>
-					<div id="commentboxright"></div>
+				<!-- Experiments Questions Section -->
+				<div id="exp" class="fontClass">
+					<fieldset>
+						<legend id="expTitle" class="fontClass">Choose one of the experiments</legend>
+						<ul type="none" class="fontClass">
+							<li><input type="radio" id="calc" name="expt" value="calc" autocomplete="off">Calculation
+							</li>
+							<li><input type="radio" id="gParts" name="expt" value="gParts" autocomplete="off">Identify
+								Parts
+								of
+								Governor</li>
+						</ul>
+					</fieldset>
 				</div>
 			</div>
-		
+
 
 			<div class="secondColumn">
 				<div id="variables">
@@ -81,14 +98,15 @@
 					<div id="nset" class="variable">
 						<div class="varname">
 							<p title="Height of the Governor">Height(mm)&nbsp; </p>
-							<input id="hval" type="textbox" style="background-color:white;width:60px;color:black;margin-bottom:20px"
+							<input id="hval" type="textbox"
+								style="background-color:white;width:60px;color:black;margin-bottom:20px"
 								disabled></input>
 						</div>
 					</div>
 				</div>
 				<div id="controls">
 					<h3 id="ctrltitle" style="text-align: center;">CONTROLS</h3>
-					<div class="usercheck">
+					<div class="usercheck" style="display: flex; gap:10px">
 						<input type="checkbox" id="cb" onclick="drawgraphh();" />
 						<p id="sg">Show Graph</p><!-- Checkbox to display graph-->
 					</div>
@@ -125,18 +143,7 @@
 
 
 		</div>
-		<!-- Experiments Questions Section -->
-		<div id="exp" class="fontClass">
-			<fieldset>
-				<legend id="expTitle" class="fontClass">Choose one of the experiments</legend>
-				<ul type="none" class="fontClass">
-					<li><input type="radio" id="calc" name="expt" value="calc" autocomplete="off">Calculation</li>
-					<li><input type="radio" id="gParts" name="expt" value="gParts" autocomplete="off">Identify Parts
-						of
-						Governor</li>
-				</ul>
-			</fieldset>
-		</div>
+
 
 
 
@@ -303,7 +310,7 @@
 		var ansSpan4 = document.createElement("span");
 		var ansSpan5 = document.createElement("span");
 		function editcss() {
-			$('.variable').css('padding-top', '30px');
+			//$('.variable').css('padding-top', '30px');
 			$('.usercheck').css('left', '40px');
 			// <!-- $('#legend').css("width",document.getElementById('legendimg').width+"px"); -->
 			// <!-- $('#legend').css("top",419); -->
@@ -512,12 +519,12 @@
 		function setExperiments() {
 			document.getElementById("simscreen").style.visibility = "hidden";
 			document.getElementById("graph").style.display = "none";
-			document.getElementById("variables").style.visibility = "hidden";
+			document.getElementById("variables").style.display = "none";
 			document.getElementById("myImg").style.display = "none";
 			document.getElementById("fb").style.display = "none";
 			document.getElementById("eqn").style.display = "none";
-			document.getElementById("cb").style.visibility = "hidden";
-			document.getElementById("sg").style.visibility = "hidden";
+			document.getElementById("cb").style.display = "none";
+			document.getElementById("sg").style.display = "none";
 			document.getElementById("exp").style.display = "inline-block";
 			document.getElementById("commentboxleft").innerHTML = "";
 			document.getElementById("goToExperiment").style.display = "none";
@@ -544,7 +551,7 @@
 			if ($('#calc').is(':checked')) {
 				document.getElementById("commentboxleft").innerHTML = "Calculation Selected";
 				document.getElementById("simscreen").style.visibility = "visible";
-				document.getElementById("variables").style.visibility = "visible";
+				document.getElementById("variables").style.display = "block";
 				randomizeValues();
 				varupdate();
 				randomizeExperiments();
@@ -639,14 +646,14 @@
 		function exitExperiments() {
 			document.getElementById("simscreen").style.visibility = "hidden";
 			document.getElementById("graph").style.display = "none";
-			document.getElementById("variables").style.visibility = "hidden";
+			document.getElementById("variables").style.display = "none";
 			document.getElementById("myImg").style.display = "none";
 			document.getElementById("partImage").style.display = "none";
 			document.getElementById("dropDownSet").style.display = "none";
 			document.getElementById("fb").style.display = "none";
 			document.getElementById("eqn").style.display = "none";
-			document.getElementById("cb").style.visibility = "hidden";
-			document.getElementById("sg").style.visibility = "hidden";
+			document.getElementById("cb").style.display = "none";
+			document.getElementById("sg").style.display = "none";
 			document.getElementById("exp").style.display = "inline-block";
 			document.getElementById('commentboxright').innerHTML = "";
 			// document.getElementById('commentboxleft').style.width = '570px';
@@ -671,12 +678,12 @@
 			randCal = 0;
 			clearGraph();
 			document.getElementById("simscreen").style.visibility = "visible";
-			document.getElementById("variables").style.visibility = "visible";
+			document.getElementById("variables").style.display = "block";
 			document.getElementById("myImg").style.display = "block";
 			document.getElementById("fb").style.display = "block";
-			document.getElementById("cb").style.visibility = "visible";
+			document.getElementById("cb").style.display = "block";
 			document.getElementById("cb").checked = false;
-			document.getElementById("sg").style.visibility = "visible";
+			document.getElementById("sg").style.display = "block";
 			document.getElementById("eqn").style.display = "none";
 			document.getElementById("partImage").style.display = "none";
 			document.getElementById("dropDownSet").style.display = "none";

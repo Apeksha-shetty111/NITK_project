@@ -3,6 +3,7 @@
 
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<title>SOLVE - Mechanics of Machines Lab - Governor </title>
 	<link rel="stylesheet" href="css/MOMstyle.css" />
@@ -18,6 +19,7 @@
 	<script src="js/graph_use.ob.js"></script>
 	<script src="js/graph_use2.ob.js"></script>
 	<link href="css/mathstyle.css" rel="stylesheet" />
+	<link href="./css/responsive.css" rel="stylesheet"/>
 </head>
 
 <body onload="editcss(); startsim(); varinit();printcomment();">
@@ -27,6 +29,7 @@
 	</noscript>
 
 	<div class="parentContainer">
+		
 		<div class="imgBox">
 			<img src="../images/logo.png" alt="logo" height="50px" width="50px" />
 			<div id="simtitle">Porter Governor</div>
@@ -53,10 +56,11 @@
 					<div id="commentboxright"></div>
 				</div>
 			</div>
+		
 
 			<div class="secondColumn">
 				<div id="variables">
-					<h3 id="vartitle">VARIABLES</h3>
+					<h3 id="vartitle" style="text-align: center;">VARIABLES</h3>
 					<div id="mset" class="variable">
 						<div class="varname">
 							<p title="Input Angular Velocity">n(rpm)&nbsp;</p>
@@ -77,13 +81,13 @@
 					<div id="nset" class="variable">
 						<div class="varname">
 							<p title="Height of the Governor">Height(mm)&nbsp; </p>
-							<input id="hval" type="textbox" style="background-color:white;width:60px;color:black"
+							<input id="hval" type="textbox" style="background-color:white;width:60px;color:black;margin-bottom:20px"
 								disabled></input>
 						</div>
 					</div>
 				</div>
 				<div id="controls">
-					<h3 id="ctrltitle">CONTROLS</h3>
+					<h3 id="ctrltitle" style="text-align: center;">CONTROLS</h3>
 					<div class="usercheck">
 						<input type="checkbox" id="cb" onclick="drawgraphh();" />
 						<p id="sg">Show Graph</p><!-- Checkbox to display graph-->

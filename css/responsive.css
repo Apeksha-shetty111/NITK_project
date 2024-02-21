@@ -1,0 +1,47 @@
+@media only screen and (max-width: 760px) {
+
+    .secondColumn{
+        display: flex;
+        flex: auto;
+        flex-direction: row;
+    }
+
+    #variables,#controls{
+        width: -webkit-fill-available;
+    }
+
+    #firstRow{
+        display: flex;
+        flex-direction:column;
+    }
+
+}
+
+@media screen and (max-width: 630px) {
+
+    .secondColumn{
+        display: flex;
+        flex: auto;
+        flex-direction: column;
+    }
+
+    #firstRow{
+        display: flex;
+        flex-direction:column;
+
+    }
+     #goToExperiment{
+        margin-bottom: 50px;
+     }
+
+     .imageRow {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+}

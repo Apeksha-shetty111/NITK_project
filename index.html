@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-US">
+
 <head>
 	<meta charset="UTF-8">
 
@@ -31,24 +32,19 @@
 				<img src="../images/logo.png" alt="logo" height="50px" width="50px"/>
 				<div id="simtitle">Porter Governor</div>
 			</div>
-			<div id="allimage">
-				<div id="canvas">
 			<canvas id="simscreen" height="400px" width="550px"></canvas>
-		</div>
-		<div class="eqtns">
-			<p id="fb" style="left: 330px; top: 90px;font-size: 24px; font-family: Comic Sans MS;">
+			<p id="fb" style="position:absolute; left: 330px; top: 90px;font-size: 24px; font-family: Comic Sans MS;">
 				Free
 				Body Diagram</p>
 			<p id="eqn"
 				style="position:absolute; left: 380px; top: 90px;font-size: 24px; font-family: Comic Sans MS;visibility:hidden">
-				N<sup>2</sup> &alpha; <span class="frac"><sup>1</sup><span>&frasl;</span><sub>h</sub></span></p></div>
+				N<sup>2</sup> &alpha; <span class="frac"><sup>1</sup><span>&frasl;</span><sub>h</sub></span></p>
 			<!-- Used mathstyle.css file to display equation -->
-			<div id="circute">
-			<img src="images/FBD_porter.png" id="myImg">
-	        <div id="graph" style=></div></div>
-			<div id="parts">
+			<img src="images/FBD_porter.png" id="myImg"
+				style="position:absolute; left: 280px; top: 120px; height:380px;" />
+			<div id="graph" style="position: absolute;left:280px; top: 180px;width:300px;height:300px"></div>
 			<img src="images/expImage.png" id="partImage"
-				style="visibility:hidden" /></div>
+				style="position:absolute; left: 112px; top: 150px;visibility:hidden" />
 			<!-- Experiments Questions Section -->
 			<div id="exp" class="fontClass">
 				<fieldset>
@@ -63,157 +59,99 @@
 			</div>
 
 
-			<!-- Questions Division -->
-			<div id="questionsSet" class="fontClass">
-				<div id="qHeight" class="questionDivision">
-					<label for="calcHeight">Find the Height(mm): <input id="calcHeight" type="text" autocomplete="off"
-							value="" oninput="resetValues();"><span id="hspan"></span></label>
-					<label for="check1"><input id="check1" type="button" value="CHECK" onclick="evalHeight()" />
-				</div>
-				<div id="qMass" class="questionDivision">
-					<label for="calcMass">Find the Mass(kg): <input id="calcMass" type="text" autocomplete="off"
-							value="" oninput="resetValues();"><span id="mspan"></span></label>
-					<label for="check2"><input id="check2" type="button" value="CHECK" onclick="evalMass()" />
-				</div>
-				<div id="qRpm" class="questionDivision">
-					<label for="calcRpm">Find the n(rpm): <input id="calcRpm" type="text" autocomplete="off" value=""
-							oninput="resetValues();"><span id="rspan"></span></label>
-					<label for="check3"><input id="check3" type="button" value="CHECK" onclick="evalRpm()" />
-				</div>
+
+		<!-- Questions Division -->
+		<div id="questionsSet" class="fontClass">
+			<div id="qHeight" class="questionDivision">
+				<label for="calcHeight">Find the Height(mm): <input id="calcHeight" type="text" autocomplete="off"
+						value="" oninput="resetValues();"><span id="hspan"></span></label>
+				<label for="check1"><input id="check1" type="button" value="CHECK" onclick="evalHeight()" />
 			</div>
-			<!-- Pivot  -->
-			<!-- Fly Ball -->
-			<!-- Connecting Rod -->
-			<!-- Spindle -->
-			<!-- Sleeve -->
-			<!-- Extended Arm -->
-			<!-- Arm -->
-			<div id="dropDownSet">
-				<p class="fontClass" id="partTitle">Identify Parts of Governor</p>
-				<div id="dropPivot">
-					<select id="pivot" onchange="evaluateParts(this);">
-						<option></option>
-						<option>Fly Ball</option>
-						<option>Spindle</option>
-						<option>Pivot</option>
-						<option>Extended Arm</option>
-					</select>
-				</div>
-				<div id="dropFlyBall">
-					<select id="flyBall" onchange="evaluateParts(this);">
-						<option></option>
-						<option>Arm</option>
-						<option>Pivot</option>
-						<option>Spindle</option>
-						<option>Fly Ball</option>
-					</select>
-				</div>
-				<div id="dropSleeve">
-					<select id="sleeve" onchange="evaluateParts(this);">
-						<option></option>
-						<option>Extended Arm</option>
-						<option>Spindle</option>
-						<option>Connecting Rod</option>
-						<option>Sleeve</option>
-					</select>
-				</div>
-				<div id="dropSpindle">
-					<select id="spindle" onchange="evaluateParts(this);">
-						<option></option>
-						<option>Pivot</option>
-						<option>Spindle</option>
-						<option>Fly Ball</option>
-						<option>Arm</option>
-					</select>
-				</div>
-				<div id="dropConnectingRod">
-					<select id="connectingRod" onchange="evaluateParts(this);">
-						<option></option>
-						<option>Extended Arm</option>
-						<option>Arm</option>
-						<option>Connecting Rod </option>
-						<option>Sleeve</option>
-					</select>
-				</div>
-				<div id="dropArm">
-					<select id="arm" onchange="evaluateParts(this);">
-						<option></option>
-						<option>Spindle</option>
-						<option>Arm</option>
-						<option>Pivot</option>
-						<option>Fly Ball</option>
-					</select>
-				</div>
+			<div id="qMass" class="questionDivision">
+				<label for="calcMass">Find the Mass(kg): <input id="calcMass" type="text" autocomplete="off" value=""
+						oninput="resetValues();"><span id="mspan"></span></label>
+				<label for="check2"><input id="check2" type="button" value="CHECK" onclick="evalMass()" />
+			</div>
+			<div id="qRpm" class="questionDivision">
+				<label for="calcRpm">Find the n(rpm): <input id="calcRpm" type="text" autocomplete="off" value=""
+						oninput="resetValues();"><span id="rspan"></span></label>
+				<label for="check3"><input id="check3" type="button" value="CHECK" onclick="evalRpm()" />
 			</div>
 		</div>
-		<div id="titleincanvas"></div>
-
-		<div id="commentboxleft"></div>
-		<div id="commentboxright"></div>
-
-		<div id="vartitle">VARIABLES</div>
-
-		<div id="variables">
-			<div id="mset" class="variable">
-				<div class="varname">
-					<p title="Input Angular Velocity">n(rpm)&nbsp;</p>
-					<input id="nspinner" disabled></input>
-				</div>
-				<div id="nslider"></div>
+		<!-- Pivot  -->
+		<!-- Fly Ball -->
+		<!-- Connecting Rod -->
+		<!-- Spindle -->
+		<!-- Sleeve -->
+		<!-- Extended Arm -->
+		<!-- Arm -->
+		<div id="dropDownSet">
+			<img src="images/expImage.png" id="partImage" style="display:none" />
+			<p class="fontClass" id="partTitle">Identify Parts of Governor</p>
+			<div id="dropPivot">
+				<select id="pivot" onchange="evaluateParts(this);">
+					<option></option>
+					<option>Fly Ball</option>
+					<option>Spindle</option>
+					<option>Pivot</option>
+					<option>Extended Arm</option>
+				</select>
 			</div>
-
-			<div id="massset" class="variable">
-				<div class="varname">
-					<p title="Input Angular Velocity">mass(kg)&nbsp;</p>
-					<input id="massspinner" disabled></input>
-				</div>
-				<div id="massslider"></div>
+			<div id="dropFlyBall">
+				<select id="flyBall" onchange="evaluateParts(this);">
+					<option></option>
+					<option>Arm</option>
+					<option>Pivot</option>
+					<option>Spindle</option>
+					<option>Fly Ball</option>
+				</select>
 			</div>
-
-
-			<div id="nset" class="variable">
-				<div class="varname">
-					<p title="Height of the Governor">Height(mm)&nbsp; </p>
-					<input id="hval" type="textbox" style="background-color:white;width:60px;color:black"
-						disabled></input>
-				</div>
+			<div id="dropSleeve">
+				<select id="sleeve" onchange="evaluateParts(this);">
+					<option></option>
+					<option>Extended Arm</option>
+					<option>Spindle</option>
+					<option>Connecting Rod</option>
+					<option>Sleeve</option>
+				</select>
+			</div>
+			<div id="dropSpindle">
+				<select id="spindle" onchange="evaluateParts(this);">
+					<option></option>
+					<option>Pivot</option>
+					<option>Spindle</option>
+					<option>Fly Ball</option>
+					<option>Arm</option>
+				</select>
+			</div>
+			<div id="dropConnectingRod">
+				<select id="connectingRod" onchange="evaluateParts(this);">
+					<option></option>
+					<option>Extended Arm</option>
+					<option>Arm</option>
+					<option>Connecting Rod </option>
+					<option>Sleeve</option>
+				</select>
+			</div>
+			<div id="dropArm">
+				<select id="arm" onchange="evaluateParts(this);">
+					<option></option>
+					<option>Spindle</option>
+					<option>Arm</option>
+					<option>Pivot</option>
+					<option>Fly Ball</option>
+				</select>
 			</div>
 		</div>
 
-
-		<div id="ctrltitle">CONTROLS</div>
-		<div id="controls">
-			<div class="usercheck">
-				<input type="checkbox" id="cb" onclick="drawgraphh();" />
-				<p id="sg">Show Graph</p><!-- Checkbox to display graph-->
-			</div>
-			<div class="buttonSet">
-				<div>
-					<input type="button" id="goToExperiment" onclick="setExperiments();" value="Go to Experiment" />
-					<!-- To select the experiments -->
-				</div>
-				<div>
-					<input type="button" id="startExperiment" onclick="startExperiments();" value="Start Experiment" />
-					<!-- To start with experiments -->
-				</div>
-				<div>
-					<input type="button" id="exitExperiment" onclick="exitExperiments();" value="Exit Experiment" />
-					<!-- To exit from experiments -->
-				</div>
-				<div>
-					<input type="button" id="goSimulator" onclick="goToSimulator();" value="Go To Simulator" />
-					<!-- To exit from experiments -->
-				</div>
-				<div>
-					<input type="button" id="resetExperiment" onclick="resetExperiments();" value="Reset Experiment" />
-					<!-- To reset experiments -->
-				</div>
+		<!-- <div id="titleincanvas"></div> -->
 
 
-			</div>
+
+
+
+		<div id="copyright" title="Developer : Bijay Swarnkar"> Copyright &copy; SOLVE The Virtual Lab @ NITK Surathkal
 		</div>
-
-		<div id="copyright" title="Developer : Bijay Swarnkar"> Copyright &copy; SOLVE The Virtual Lab @ NITK Surathkal</div>
 
 	</div>
 
@@ -443,10 +381,10 @@
 		function drawgraphh() {
 			document.getElementById("graph").innerHTML = "";
 			if (gr == 0) {
-				document.getElementById("graph").style.visibility = "visible";
-				document.getElementById("eqn").style.visibility = "visible";
-				document.getElementById("myImg").style.visibility = "hidden";
-				document.getElementById("fb").style.visibility = "hidden";
+				document.getElementById("graph").style.display = "block";
+				document.getElementById("eqn").style.display = "block";
+				document.getElementById("myImg").style.display = "none";
+				document.getElementById("fb").style.display = "none";
 				gr = 1;
 				for (plott = 130; plott <= 180; plott++) {
 					omega1 = (2 * 3.14 * (plott)) / 600;
@@ -456,10 +394,10 @@
 				drawgraph("graph", datapoints1, "height(mm)", "n(rpm)", colorGraph);//Used graph.ob.js and graph_use.ob.js files plot graph
 			}
 			else if (gr == 1) {
-				document.getElementById("graph").style.visibility = "hidden";
-				document.getElementById("eqn").style.visibility = "hidden";
-				document.getElementById("myImg").style.visibility = "visible";
-				document.getElementById("fb").style.visibility = "visible";
+				document.getElementById("graph").style.display = "none";
+				document.getElementById("eqn").style.display = "none";
+				document.getElementById("myImg").style.display = "block";
+				document.getElementById("fb").style.display = "block";
 				gr = 0;
 				datapoints1.length = 0;//clears the datapoints
 			}
@@ -489,18 +427,18 @@
 			}
 		}
 		function printcomment() {
-			document.getElementById('commentboxleft').style.width = '570px';
+			// document.getElementById('commentboxleft').style.width = '570px';
 			document.getElementById('commentboxleft').innerHTML = "<center>s stands for sleeve; change rpm to see the change in height </center>";
 			// ignore use of deprecated tag <center> . Code is executed only if printcomment function receives inappropriate commentloc value
 		}
 		//To set Experiments
 		function setExperiments() {
 			document.getElementById("simscreen").style.visibility = "hidden";
-			document.getElementById("graph").style.visibility = "hidden";
+			document.getElementById("graph").style.display = "none";
 			document.getElementById("variables").style.visibility = "hidden";
-			document.getElementById("myImg").style.visibility = "hidden";
-			document.getElementById("fb").style.visibility = "hidden";
-			document.getElementById("eqn").style.visibility = "hidden";
+			document.getElementById("myImg").style.display = "none";
+			document.getElementById("fb").style.display = "none";
+			document.getElementById("eqn").style.display = "none";
 			document.getElementById("cb").style.visibility = "hidden";
 			document.getElementById("sg").style.visibility = "hidden";
 			document.getElementById("exp").style.display = "inline-block";
@@ -537,7 +475,7 @@
 			else if ($('#gParts').is(':checked')) {
 				document.getElementById("commentboxleft").innerHTML = "Identify parts of governor using dropdown";
 				document.getElementById("resetExperiment").style.display = "none";
-				document.getElementById("partImage").style.visibility = "visible";
+				document.getElementById("partImage").style.display = "block";
 				document.getElementById("dropDownSet").style.display = "block";
 			}
 		}
@@ -582,7 +520,7 @@
 			$("#qRpm").hide();
 			$("#questionsSet").show();
 			$("#qHeight").show();
-			document.getElementById('commentboxleft').style.width = '300px';
+			// document.getElementById('commentboxleft').style.width = '300px';
 			document.getElementById("commentboxleft").innerHTML = "<span style='color:green'>Constant Variables</span>:<br> M = 20kg";
 			document.getElementById("commentboxright").innerHTML = "";
 		}
@@ -596,10 +534,10 @@
 			$("#questionsSet").show();
 			$("#qMass").show();
 			gr = 0;
-			document.getElementById("graph").style.visibility = "visible";
-			document.getElementById("eqn").style.visibility = "hidden";
+			document.getElementById("graph").style.display = "block";
+			document.getElementById("eqn").style.display = "none";
 			sliderGraph();
-			document.getElementById('commentboxleft').style.width = '300px';
+			// document.getElementById('commentboxleft').style.width = '300px';
 			document.getElementById("commentboxleft").innerHTML = "<span style='color:green'>Constant Variables</span>:<br>M = 20kg";
 			document.getElementById("commentboxright").innerHTML = "";
 		}
@@ -612,7 +550,7 @@
 			$("#qHeight").hide();
 			$("#questionsSet").show();
 			$("#qRpm").show();
-			document.getElementById('commentboxleft').style.width = '300px';
+			// document.getElementById('commentboxleft').style.width = '300px';
 			document.getElementById("commentboxleft").innerHTML = "<span style='color:green'>Constant Variables</span>:<br>M = 20kg";
 			document.getElementById("commentboxright").innerHTML = "";
 		}
@@ -623,18 +561,18 @@
 		//To exit from experiments
 		function exitExperiments() {
 			document.getElementById("simscreen").style.visibility = "hidden";
-			document.getElementById("graph").style.visibility = "hidden";
+			document.getElementById("graph").style.display = "none";
 			document.getElementById("variables").style.visibility = "hidden";
-			document.getElementById("myImg").style.visibility = "hidden";
-			document.getElementById("partImage").style.visibility = "hidden";
+			document.getElementById("myImg").style.display = "none";
+			document.getElementById("partImage").style.display = "none";
 			document.getElementById("dropDownSet").style.display = "none";
-			document.getElementById("fb").style.visibility = "hidden";
-			document.getElementById("eqn").style.visibility = "hidden";
+			document.getElementById("fb").style.display = "none";
+			document.getElementById("eqn").style.display = "none";
 			document.getElementById("cb").style.visibility = "hidden";
 			document.getElementById("sg").style.visibility = "hidden";
 			document.getElementById("exp").style.display = "inline-block";
 			document.getElementById('commentboxright').innerHTML = "";
-			document.getElementById('commentboxleft').style.width = '570px';
+			// document.getElementById('commentboxleft').style.width = '570px';
 			document.getElementById("commentboxleft").innerHTML = "";
 			document.getElementById("exitExperiment").style.display = "none";
 			document.getElementById("resetExperiment").style.display = "none";
@@ -657,13 +595,13 @@
 			clearGraph();
 			document.getElementById("simscreen").style.visibility = "visible";
 			document.getElementById("variables").style.visibility = "visible";
-			document.getElementById("myImg").style.visibility = "visible";
-			document.getElementById("fb").style.visibility = "visible";
+			document.getElementById("myImg").style.display = "block";
+			document.getElementById("fb").style.display = "block";
 			document.getElementById("cb").style.visibility = "visible";
 			document.getElementById("cb").checked = false;
 			document.getElementById("sg").style.visibility = "visible";
-			document.getElementById("eqn").style.visibility = "hidden";
-			document.getElementById("partImage").style.visibility = "hidden";
+			document.getElementById("eqn").style.display = "none";
+			document.getElementById("partImage").style.display = "none";
 			document.getElementById("dropDownSet").style.display = "none";
 			document.getElementById("exp").style.display = "none";
 			document.getElementById("commentboxleft").innerHTML = "";
@@ -676,7 +614,7 @@
 			document.getElementById("calcMass").value = "";
 			document.getElementById("calcRpm").value = "";
 			document.getElementById('commentboxright').innerHTML = "";
-			document.getElementById('commentboxleft').style.width = '570px';
+			// document.getElementById('commentboxleft').style.width = '570px';
 			document.getElementById('commentboxleft').innerHTML = "<center>s stands for shaft; change rpm to see the change in height </center>";
 			$("input:radio[name='expt']").prop('checked', false);
 			enableVariables();
@@ -749,7 +687,7 @@
 			$("#massset").hide();
 			$("#nset").hide();
 			$("#mset").hide();
-			document.getElementById("graph").style.visibility = "hidden";
+			document.getElementById("graph").style.display = "none";
 			resetValues();
 			selectExperiments();
 		}

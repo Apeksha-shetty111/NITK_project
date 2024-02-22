@@ -7,12 +7,13 @@
 
 .parentContainer {
 	position: relative;
-	background-color: white;
+	/* background-color: white; */
 	max-width: 850px;
 	height:auto;
 	margin: 0 auto;
-	border:5px solid #994D1C;
-	background-color:gainsboro;
+	/* border:5px solid #994D1C; */
+	background-color:rgb(105, 209, 228);
+	padding: 10px 0px;
 }
 
 .imgBox {
@@ -20,6 +21,7 @@
 	background: #994D1C;
 	align-items: center;
 	padding: 12px 10px;
+	margin: 0px 10px;
 }
 
 div#simtitle {
@@ -65,6 +67,9 @@ div#copyright {
 	font-family: sans-serif;
 	/* margin: 10px; */
 	background-color: #994D1C;
+	margin: 0px 10px;
+    /* margin-top: 0; */
+    padding: 2px;
 }
 
 #tabchangeforward {
@@ -116,30 +121,48 @@ canvas#simscreen {
 
 #firstRow {
 	display: flex;
-	gap: 30px;
-	
 }
 
 .firstCol {
 	display: flex;
 	flex-direction: column;
-	border-radius: 50px;
+	background-color: lightgray;
+	margin: 10px;
+    margin-right: 0;
+	flex:3;
+	justify-content: center;
+	align-items: center;
 }
 
 .secondColumn {
 	display: flex;
 	flex-direction: column;
 	flex: auto;
-    
+	margin: 10px;
+	gap: 10px;
+	flex:1;
+}
+#variables {
+	display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: space-around;
+    /* align-items: center; */
+    flex: 1;
 }
 #controls{
-	flex-grow: 1;
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: space-around; */
+    gap: 10px;	
+	flex: 1;
 }
 
 #variables,
 #controls {
 	background-color: lightgray;
-	border: 3px solid#994D1C;
+	/* border: 3px solid#994D1C; */
 	border-width: 5px;
 
 }
@@ -222,16 +245,19 @@ div#commentboxright {
 }
 
 .buttonSet {
-	/* position:inherit; */
+	/* position:inherit;
 	position: relative;
 	padding-left: 30px;
-	padding-top: 15px;
+	padding-top: 15px; */
+	display: flex;
+    flex-direction: column;
+    gap: 3px;
 }
 
 .variable {
 	position: relative;
 	left: 15px;
-	padding-top: 10px;
+	padding-top: 20px;
 	width: 150px;
 }
 
@@ -250,14 +276,14 @@ div#commentboxright {
 	display: inline;
 }
 
-.usercheck {
+/* .usercheck {
 	position: relative;
 	left: 40px;
 	top: 10px;
 	padding-top: 10px;
 	height: 20px;
 	width: 125px;
-}
+} */
 
 .usercheck p {
 	position: relative;
@@ -284,8 +310,8 @@ div#commentboxright {
 
 #exp {
 	position: absolute;
-	left: 150px;
-	top: 150px;
+	/* left: 150px;
+	top: 150px; */
 	font-size: 20px;
 	font-family: serif;
 	display: none;
@@ -310,8 +336,8 @@ ul li {
 
 .questionDivision {
 	position: absolute;
-	left: 250px;
-	top: 470px;
+    left: 309px;
+    top: 384px;
 }
 
 .questionDivision input[type="text"] {
